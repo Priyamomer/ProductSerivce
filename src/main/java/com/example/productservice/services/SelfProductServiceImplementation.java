@@ -1,6 +1,7 @@
 package com.example.productservice.services;
 
 import com.example.productservice.dtos.GenericProductDto;
+import com.example.productservice.exceptions.ProductNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service("selfProductServiceImpl")
@@ -20,7 +21,7 @@ public class SelfProductServiceImplementation {
     public void updateProductById(){
 
     }
-    GenericProductDto getProductById(Long id){
+    GenericProductDto getProductById(Long id) throws ProductNotFoundException {
         return null;
     }
 }
