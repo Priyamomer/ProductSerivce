@@ -3,22 +3,16 @@ package com.example.productservice.services;
 import com.example.productservice.dtos.FakeStoreProductDto;
 import com.example.productservice.dtos.GenericProductDto;
 import com.example.productservice.exceptions.ProductNotFoundException;
-import com.example.productservice.thirdParyClients.FakeStoreClientAdapter;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import com.example.productservice.thirdParyClients.FakeStoreClient;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RequestCallback;
-import org.springframework.web.client.ResponseExtractor;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service("fakeStoreProductServiceImpl")
 public class FakeStoreProductService implements ProductService{
-    private FakeStoreClientAdapter fakeStoreAdapter;
-    FakeStoreProductService(FakeStoreClientAdapter fakeStoreAdapter){
+    private FakeStoreClient fakeStoreAdapter;
+    FakeStoreProductService(FakeStoreClient fakeStoreAdapter){
         this.fakeStoreAdapter=fakeStoreAdapter;
     }
 

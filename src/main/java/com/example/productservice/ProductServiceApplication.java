@@ -10,5 +10,4 @@ public class ProductServiceApplication {
         System.out.println("Hi");
         SpringApplication.run(ProductServiceApplication.class, args);
     }
-
 }
