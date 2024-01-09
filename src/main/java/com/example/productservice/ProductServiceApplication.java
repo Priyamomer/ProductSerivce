@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration;
-
 @SpringBootApplication
 public class ProductServiceApplication implements CommandLineRunner {
 
@@ -25,7 +23,7 @@ public class ProductServiceApplication implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception{
+    public void run(String... args) {
         System.out.println("Hi");
         Student student=new Student();
         User user = new User();
