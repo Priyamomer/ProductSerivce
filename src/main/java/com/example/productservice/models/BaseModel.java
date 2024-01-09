@@ -1,7 +1,9 @@
 package com.example.productservice.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -10,6 +12,8 @@ import java.util.UUID;
 @Getter
 @Setter
 @MappedSuperclass
+@AllArgsConstructor
+@NoArgsConstructor
 public class BaseModel {
     @Id
     @GeneratedValue(generator = "generator_name")
